@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { StocksComponent } from './stocks/stocks.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StocksComponent
+    StocksComponent,
+    WatchlistComponent
   ],
   imports: [
     BrowserModule,
