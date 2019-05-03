@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Stock {
-  companyName: string
-  tickerSymbol: string
-}
-
-let mockStocks: Array<Stock> = [{companyName: 'Apple, Inc', 'tickerSymbol': 'AAPL'}, {companyName: 'Microsoft', tickerSymbol: 'MSFT'}];
+import { StocksService } from 'app/stocks.service';
+import { Router } from '@angular/router';
+import { Stock } from '../stock';
 
 @Component({
   selector: 'app-stocks',
@@ -16,10 +12,14 @@ export class StocksComponent implements OnInit {
 
   stocks: Array<Stock>;
 
-  constructor() { }
-
-  ngOnInit() {
-    this.stocks = mockStocks;
+  constructor(private stocksService: StocksService, private _router: Router) { 
+    this.stocks = stocksService.getStocks();
   }
 
+  ngOnInit() {
+  }
+
+  onSelect(stock: Stock) {
+    this._router.navigate(["/stocks", stock.tickerSymbol]);
+  }
 }

@@ -9,11 +9,15 @@ import { StocksComponent } from './stocks/stocks.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 
+import { StocksService } from './stocks.service';
+import { StockDetailComponent } from './stock-detail/stock-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     StocksComponent,
-    WatchlistComponent
+    WatchlistComponent,
+    StockDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [StocksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
