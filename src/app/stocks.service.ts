@@ -15,4 +15,15 @@ export class StocksService {
   getStocks() {
     return this.stocks;
   }
+
+  findStock(tickerSymbol: string): Stock {
+
+    for(let stock of this.stocks) {
+      if(tickerSymbol == stock.tickerSymbol) {
+        return stock;
+      }
+    }
+
+    return null;
+  }
 }
