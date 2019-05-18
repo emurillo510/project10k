@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { Stock } from './stock';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-let mockStocks: Array<Stock> = [{companyName: 'Apple, Inc', 'tickerSymbol': 'AAPL'}, {companyName: 'Microsoft', tickerSymbol: 'MSFT'}];
+let mockStocks: Array<Stock> = [
+  {companyName: 'Apple, Inc', tickerSymbol: 'AAPL', marketPrice: '189.20', changeInPriceDaily: '0.88', changeInPercentDaily: '0.46'}, 
+  {companyName: 'Microsoft', tickerSymbol: 'MSFT', marketPrice: '128.07', changeInPriceDaily: '0.86', changeInPercentDaily: '0.67'}
+];
 
 @Injectable()
 export class StocksService {
