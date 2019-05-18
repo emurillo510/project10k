@@ -11,13 +11,17 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
 
 import { StocksService } from './stocks.service';
 import { StockDetailComponent } from './stock-detail/stock-detail.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StocksComponent,
     WatchlistComponent,
-    StockDetailComponent
+    StockDetailComponent,
+    SignUpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
